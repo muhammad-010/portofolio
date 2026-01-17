@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from 'react';
 const ToggleContext = createContext();
 
 export function ToggleProvider({ children }) {
-  const [isToggled, setToggled] = useState(false);
+  const [isToggled, setToggled] = useState(true);
 
   const toggle = () => {
     setToggled((prevToggled) => !prevToggled);

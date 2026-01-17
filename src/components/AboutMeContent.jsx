@@ -37,15 +37,15 @@ import { useMediaQuery } from "react-responsive";
 
 export default function AboutMeContent() {
   const { theme, setTheme } = useTheme();
-  const [imageN, setImageN] = useState("/BnW-04.png");
+  const [imageN, setImageN] = useState("/me_vector.png");
   const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   useEffect(
     () => {
       if (theme === "dark") {
-        setImageN("/BnW-04.png");
+        setImageN("/me_vector.png");
         // setImagePort(imageDark);
       } else {
-        setImageN("/N-03.png");
+        setImageN("/me_vector.png");
         // setImagePort(imageLight);
       }
     },
@@ -70,7 +70,7 @@ export default function AboutMeContent() {
           className=" text-3xl font-extrabold"
         >
           <TextGradient
-            text="Ghifari Nafhan"
+            text="Muhammad Al Fayyadh"
             from="from-blue-500"
             via="via-violet-500"
             to="to-red-400"
@@ -96,29 +96,29 @@ export default function AboutMeContent() {
             </div>
             <Image
               src="/real.png"
-              className=" size-[95%] ms-2  rounded-lg no-select"
+              className="size-[95%] ms-1 mt-2 rounded-lg no-select"
               draggable="false"
             />
           </Card>
         </motion.div>
-        { isMobile == true ?(
-      <>
-        <motion.div className="lg:ms-10 flex flex-col mt-5 md:mt-0 text-justify md:text-start">
-         <motion.p initial={{opacity: 0,x:50}} whileInView={{opacity: 1, x: 0}} transition={{duration:1, bounceStiffness:5, delay:0.5}} className="text-md mt-5 lg:mt-0 leading-loose " >Hello 👋, I'm <TextGradient text="Ghifari Nafhan" from="to-blue-500" via="via-violet-500" to="from-red-400" className="hover:text-lg" />, a dedicated full-stack developer based in Yogyakarta, Indonesia. Currently pursuing my degree in <TextGradient text="Software Engineering" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> at UGM, I have learning the world of coding for <TextGradient text="four years" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/>, with a focused and effective learning journey of one year.</motion.p>
-         <motion.p initial={{opacity: 0,x:-50}} whileInView={{opacity: 1, x: 0}} transition={{duration:1, bounceStiffness:5, delay:0}} className="text-md mt-5 lg:mt-2 leading-loose " >My passion lies in the realm of <TextGradient text="Javascript" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> programming, and I am actively honing my skills in <TextGradient text="Next.js" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/>, Nuxt.js, Nest.js, Express.js, and Golang. As a technology enthusiast, I thrive on exploring diverse and cutting-edge technologies, embodying the essence of a versatile <TextGradient text="generalist" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/>.</motion.p>
-         <motion.p initial={{opacity: 0,x:50}} whileInView={{opacity: 1, x: 0}} transition={{duration:1, bounceStiffness:5, delay:0}} className="text-md mt-5 lg:mt-2 leading-loose " >Committed to delivering <TextGradient text="top-notch" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> solutions, I strive to stay ahead in the dynamic tech landscape. Eager to <TextGradient text="contribute" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> my skills and creativity to <TextGradient text="impactful" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> projects.</motion.p>
-      </motion.div>
-      </>
-      ):(
-      <>
-        <motion.div className="lg:ms-10 flex flex-col mt-5 md:mt-0 text-justify md:text-start">
-         <motion.p initial={{opacity: 0,x:50}} whileInView={{opacity: 1, x: 0}} transition={{duration:1, bounceStiffness:5, delay:0.5}} className="text-md mt-5 lg:mt-0 leading-loose " >Hello 👋, I'm <TextGradient text="Ghifari Nafhan" from="to-blue-500" via="via-violet-500" to="from-red-400" className="hover:text-lg" />, a dedicated full-stack developer based in Yogyakarta, Indonesia. Currently pursuing my degree in <TextGradient text="Software Engineering" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> at UGM, I have learning the world of coding for <TextGradient text="four years" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/>, with a focused and effective learning journey of one year.</motion.p>
-         <motion.p initial={{opacity: 0,x:50}} whileInView={{opacity: 1, x: 0}} transition={{duration:1, bounceStiffness:5, delay:0.5}} className="text-md mt-5 lg:mt-2 leading-loose " >My passion lies in the realm of <TextGradient text="Javascript" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> programming, and I am actively honing my skills in <TextGradient text="Next.js" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/>, Nuxt.js, Nest.js, Express.js, and Golang. As a technology enthusiast, I thrive on exploring diverse and cutting-edge technologies, embodying the essence of a versatile <TextGradient text="generalist" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/>.</motion.p>
-         <motion.p initial={{opacity: 0,x:50}} whileInView={{opacity: 1, x: 0}} transition={{duration:1, bounceStiffness:5, delay:0.5}} className="text-md mt-5 lg:mt-2 leading-loose " >Committed to delivering <TextGradient text="top-notch" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> solutions, I strive to stay ahead in the dynamic tech landscape. Eager to <TextGradient text="contribute" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> my skills and creativity to <TextGradient text="impactful" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold"  className="hover:text-lg"/> projects.</motion.p>
-      </motion.div>
-      </>
-      )
-      }
+        {isMobile == true ? (
+          <>
+            <motion.div className="lg:ms-10 flex flex-col mt-5 md:mt-0 text-justify md:text-start">
+              <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, bounceStiffness: 5, delay: 0.5 }} className="text-md mt-5 lg:mt-0 leading-loose " >Hello 👋, I'm <TextGradient text="Muhammad Al Fayyadh" from="to-blue-500" via="via-violet-500" to="from-red-400" className="hover:text-lg" />, a dedicated developer and designer based in Yogyakarta, Indonesia. Currently pursuing my degree in <TextGradient text="Software Engineering" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold" className="hover:text-lg" /> at UGM, I have learning the world of coding for <TextGradient text="three years" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold" className="hover:text-lg" /></motion.p>
+              <motion.p initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, bounceStiffness: 5, delay: 0 }} className="text-md mt-5 lg:mt-2 leading-loose " >I specialize in transforming complex requirements into structured information architecture, intuitive user flows, wireframes, and high-fidelity interfaces.</motion.p>
+              <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, bounceStiffness: 5, delay: 0 }} className="text-md mt-5 lg:mt-2 leading-loose " >Beyond design, I bring practical implementation skills using modern web technologies, enabling me to bridge the gap between design and development. This technical background helps me create realistic prototypes, collaborate effectively with engineers, and deliver solutions that are both visually polished and technically feasible.</motion.p>
+            </motion.div>
+          </>
+        ) : (
+          <>
+            <motion.div className="lg:ms-10 flex flex-col mt-5 md:mt-0 text-justify md:text-start">
+              <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, bounceStiffness: 5, delay: 0.5 }} className="text-md mt-5 lg:mt-0 leading-loose " >Hello 👋, I'm <TextGradient text="Muhammad Al Fayyadh" from="to-blue-500" via="via-violet-500" to="from-red-400" className="hover:text-lg" />, a dedicated developer and designer based in Yogyakarta, Indonesia. Currently pursuing my degree in <TextGradient text="Software Engineering" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold" className="hover:text-lg" /> at UGM, I have learning the world of coding for <TextGradient text="three years" from="to-blue-500" via="via-violet-500" to="from-red-400 font-bold" className="hover:text-lg" /></motion.p>
+              <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, bounceStiffness: 5, delay: 0.5 }} className="text-md mt-5 lg:mt-2 leading-loose " >I specialize in transforming complex requirements into structured information architecture, intuitive user flows, wireframes, and high-fidelity interfaces.</motion.p>
+              <motion.p initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 1, bounceStiffness: 5, delay: 0.5 }} className="text-md mt-5 lg:mt-2 leading-loose " >Beyond design, I bring practical implementation skills using modern web technologies, enabling me to bridge the gap between design and development. This technical background helps me create realistic prototypes, collaborate effectively with engineers, and deliver solutions that are both visually polished and technically feasible.</motion.p>
+            </motion.div>
+          </>
+        )
+        }
       </div>
     </div>
   );

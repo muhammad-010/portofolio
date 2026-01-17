@@ -42,7 +42,10 @@ import {
   SiPhp,
   SiMysql,
   SiDart,
-  SiTailwindcss
+  SiTailwindcss,
+  SiFigma,
+  SiAdobe,
+  SiWordpress,
 } from "react-icons/si";
 import { useEffect, useRef, useState } from "react";
 import Marquee from "react-fast-marquee";
@@ -52,29 +55,31 @@ import { useMediaQuery } from 'react-responsive';
 
 export default function GridSum() {
   const { theme, setTheme } = useTheme();
-  const [imageN, setImageN] = useState("/BnW-04.png");
+  const [imageN, setImageN] = useState("/N-03.png");
   const isMobile = useMediaQuery({ query: "(max-width: 1024px)" });
   const imageDark = [
-    "olivia_dark.png",
-    "nafhan-ai_dark.png",
-    "first_portfolio.png",
-    "boba_dark.png",
-    "framer_portfolio.png"
+    "/bsi_umkm.png",
+    "/into_2026.png",
+    "/into_2025.png",
+    "/velgshop.png",
+    "/karakter_ugm.png",
+    "/scoph.png"
   ];
   const [imagePort, setImagePort] = useState(imageDark);
   const { toggle } = useToggle();
 
   const imageLight = [
-    "olivia_light.png",
-    "nafhan-ai_light.png",
-    "boba-lurus.png",
-    "ui_light.png",
-    "hanstore_light.png"
+    "/bsi_umkm.png",
+    "/into_2026.png",
+    "/into_2025.png",
+    "/velgshop.png",
+    "/karakter_ugm.png",
+    "/scoph.png"
   ];
 
   useEffect(() => {
     if (theme === "dark") {
-      setImageN("/BnW-04.png");
+      setImageN("/N-03.png");
       setImagePort(imageDark);
     } else {
       setImageN("/N-03.png");
@@ -117,14 +122,14 @@ export default function GridSum() {
             >
               <Image
                 isBlurred
-                src="/nafhan.png"
+                src="/me_vector.png"
                 className="w-[170px] h-[170px] md:w-[100px] md:h-[100px] rounded-none"
               />
             </motion.div>
             <p>
-              Hi there! 👋 I'm a Software Engineering student and Full Stack
-              Developer from Indonesia. Specializing in Next.js, Nuxt.js,
-              Nest.js, Express.js, and Golang, I'm all about crafting efficient
+              Hi there! 👋 I'm a Software Engineering student at UGM, Designer and
+              Developer from Indonesia. Specializing in Next.js, MongoDB,
+              Figma, Wordpress and Motion Graphic. I'm all about crafting efficient
               web solutions. Let's innovate together!
             </p>
           </CardBody>
@@ -161,6 +166,8 @@ export default function GridSum() {
                 <Image onClick={toggle} src={imageN} width={100} height={100} />
               </motion.div>
             </motion.div>
+            <br></br>
+            <p>Portofolio</p>
           </CardBody>
         </Card>
       </motion.div>
@@ -172,30 +179,16 @@ export default function GridSum() {
         whileInView={{ opacity: 1, y: 0 }}
         className="min-h-[180px] row-span-2"
       >
-        <Card isPressable className="dark:shadow-dark-inset  h-[100%] w-[100%">
+        <Card className="dark:shadow-dark-inset  h-[100%] w-[100%">
           <CardBody className="flex p-5 justify-between">
             <div className="flex flex-row justify-between">
-              <p className="text-5xl font-bold">46</p>
-              <Tooltip showArrow={true} content="View Certificates">
-                <Button
-                  className="text-foreground shadow-dark-inset"
-                  href="/certificate"
-                  target="_blank"
-                  as={Link}
-                  isIconOnly
-                  color="foreground"
-                  radius="full"
-                  aria-label="Like"
-                >
-                  <MdArrowOutward className="w-4 h-4" />
-                </Button>
-              </Tooltip>
+              <p className="text-5xl font-bold">23</p>
             </div>
             <div>
               <p className="font-semibold">Certificates</p>
               <p className="">
-                As of January 4, 2024, I'm pleased to declare that I hold a
-                total of 46 certificates.
+                As of January 17, 2026, I'm pleased to declare that I hold a
+                total of 23 certificates competencies.
               </p>
             </div>
           </CardBody>
@@ -232,12 +225,12 @@ export default function GridSum() {
         >
           <CardBody className="flex p-5 justify-between">
             <div className="flex flex-row justify-between">
-              <p className="text-5xl font-bold">4</p>
+              <p className="text-5xl font-bold">3</p>
             </div>
             <div>
               <p className="font-semibold">Years Learning</p>
               <p className="">
-                I have 4 years of learning experience, including 3 years as a beginner
+                I have 3 years of learning experience, including 2 years as a beginner
                 and 1 year at an intermediate level.
               </p>
             </div>
@@ -258,24 +251,10 @@ export default function GridSum() {
         >
           <CardBody className="flex justify-center align-center items-center text-center relative">
             <div className="flex justify-center text-center flex-col">
-              <FaGithub className="w-[100px] h-[100px]" />
-              <p className="font-bold text-xl">Github</p>
+              <Image src="/ugm.png" width={100} height={100} />
             </div>
-            <Tooltip showArrow={true} content="Go to Github">
-              <Button
-                size="sm"
-                className="text-foreground shadow-dark-inset absolute bottom-3 left-3"
-                href="https://github.com/gnafhan"
-                target="_blank"
-                as={Link}
-                isIconOnly
-                color="foreground"
-                radius="full"
-                aria-label="Like"
-              >
-                <MdArrowOutward className="w-4 h-4" />
-              </Button>
-            </Tooltip>
+            <p className="font-bold text-xl mt-2">Software Engineering</p>
+            <p className="font text-s">Third Year</p>
           </CardBody>
         </Card>
       </motion.div>
@@ -295,9 +274,6 @@ export default function GridSum() {
             <p className="font-bold text-lg relative ">Skill and Tech Stack</p>
             <div className="relative mt-5">
               <Marquee loop={0} speed={30}>
-                <SiNextdotjs className=" mx-3 w-20 h-20 dark:text-white " />
-                <SiNuxtdotjs className=" mx-3 w-20 h-20 dark:text-white text-success" />
-                <SiExpress className=" mx-3 w-20 h-20 dark:text-white text-gray-500" />
                 <SiNestjs className=" mx-3 w-20 h-20 dark:text-white text-danger" />
                 <FaGolang className=" mx-3 w-20 h-20 dark:text-white text-cyan-400" />
                 <SiFlutter className=" mx-3 w-20 h-20 dark:text-white text-blue-400" />
@@ -305,17 +281,24 @@ export default function GridSum() {
                 <SiFramer className=" mx-3 w-20 h-20 dark:text-white " />
                 <SiTailwindcss className=" mx-3 w-20 h-20 dark:text-white text-cyan-400 " />
                 <SiChakraui className=" mx-3 w-20 h-20 dark:text-white text-teal-400" />
+                <SiMongodb className=" mx-3 w-20 h-20 dark:text-white text-green-500" />
+
+
               </Marquee>
               <Marquee loop={0} direction="right" className="mt-5" speed={30}>
                 <SiJavascript className=" mx-3 w-20 h-20 dark:text-white text-yellow-300" />
                 <SiTypescript className=" mx-3 w-20 h-20 dark:text-white text-blue-700" />
                 <SiPython className=" mx-3 w-20 h-20 dark:text-white text-yellow-400" />
-                <FaJava className=" mx-3 w-20 h-20 dark:text-white text-blue-900" />
                 <SiHtml5 className=" mx-3 w-20 h-20 dark:text-white text-orange-600" />
                 <SiCss3 className=" mx-3 w-20 h-20 dark:text-white text-blue-500 " />
                 <SiPhp className=" mx-3 w-20 h-20 dark:text-white text-[#7B7FB5]" />
-                <SiMysql className=" mx-3 w-20 h-20 dark:text-white text-orange-400" />
-                <SiDart className=" mx-3 w-20 h-20 dark:text-white text-blue-800" />
+                <SiFigma className=" mx-3 w-20 h-20 dark:text-white text-pink-500" />
+                <SiAdobe className=" mx-3 w-20 h-20 dark:text-white text-red-600" />
+                <SiWordpress className=" mx-3 w-20 h-20 dark:text-white text-blue-600" />
+                <SiKotlin className=" mx-3 w-20 h-20 dark:text-white text-purple-600" />
+                <SiFirebase className=" mx-3 w-20 h-20 dark:text-white text-yellow-500" />
+                <SiLaravel className=" mx-3 w-20 h-20 dark:text-white text-blue-600" />
+                <SiFlutter className=" mx-3 w-20 h-20 dark:text-white text-blue-600" />
               </Marquee>
             </div>
           </CardBody>
@@ -341,7 +324,7 @@ export default function GridSum() {
               <Button
                 size="sm"
                 className="text-foreground shadow-dark-inset absolute bottom-3 left-3"
-                href="https://www.linkedin.com/in/gnafhan/"
+                href="https://www.linkedin.com/in/muhammadalfayyadh/"
                 target="_blank"
                 as={Link}
                 isIconOnly
@@ -414,7 +397,7 @@ export default function GridSum() {
               <Button
                 size="sm"
                 className="text-foreground shadow-dark-inset absolute bottom-3 left-3"
-                href="https://instagram.com/ghifarinafhan_"
+                href="https://instagram.com/m_alfayyadh_"
                 target="_blank"
                 as={Link}
                 isIconOnly
@@ -448,7 +431,7 @@ export default function GridSum() {
               <Button
                 size="sm"
                 className="text-foreground shadow-dark-inset absolute bottom-3 left-3"
-                href="mailto:nafhanghifari@gmail.com"
+                href="mailto:muhammadalfayyadh@mail.ugm.ac.id"
                 target="_blank"
                 as={Link}
                 isIconOnly
